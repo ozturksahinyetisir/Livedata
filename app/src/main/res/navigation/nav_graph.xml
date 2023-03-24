@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/livedataFragment"
+        android:name="com.ozturksahinyetisir.livedatat1.presentation.views.livedata.LivedataFragment"
+        android:label="LivedataFragment" >
+        <action
+            android:id="@+id/action_livedataFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalFragment"
+        android:name="com.ozturksahinyetisir.livedatat1.presentation.views.normal.NormalFragment"
+        android:label="NormalFragment" >
+        <action
+            android:id="@+id/action_normalFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.ozturksahinyetisir.livedatat1.presentation.views.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_normalFragment"
+            app:destination="@id/normalFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_livedataFragment"
+            app:destination="@id/livedataFragment" />
+    </fragment>
+</navigation>
